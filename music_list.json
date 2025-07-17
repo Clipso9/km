@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Get Lucky",
+    "artist": "Daft Punk",
+    "fileNamePrefix": "getlucky"
+  },
+  {
+    "title": "Whole Lotta Love",
+    "artist": "Led Zeppelin",
+    "fileNamePrefix": "WholeLottaLove"
+  },
+  {
+    "title": "Wildflower",
+    "artist": "Billie Eilish",
+    "fileNamePrefix": "wflower"
+  }
+]

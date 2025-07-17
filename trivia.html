@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kendine Müzisyen Yarışması</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kendine Müzisyen kanalı için özel olarak tasarlanmış interaktif bilgi yarışması.">
+  <meta name="keywords" content="Kendine Müzisyen, yarışma, bilgi yarışması, interaktif, Twitch, yayıncı">
+  <meta name="author" content="Clipso">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://js.pusher.com/8.4/pusher.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html"> <img src="logo.png" alt="Kendine Müzisyen Logo"> </a>
+  </div>
+
+  <div class="main-container">
+    <div class="question-tracker">
+      <h3>Soru Takibi</h3>
+      <div class="tracker-list" id="questionTracker">
+        </div>
+    </div>
+    <div class="container">
+      <p class="main-p">Chatteki kişiler A, B, C veya D yazarak oylama yapabilirler. İlk 5 soruda süre vardır daha sonra kalkacaktır.</p>
+      <button id="startBtn" class="start-button">Yarışmayı Başlat</button>
+    </div>
+  </div>
+
+  <div class="question-box">
+    <div id="quizContent" style="display:none;">
+      <div class="timer" id="timer">30</div>
+      <div class="question" id="question">Soru yükleniyor...</div>
+      <div class="options" id="optionsContainer">
+        <div class="option" id="A">A) <span class="text"></span><div class="vote"></div><span class="vote-count-text" id="voteTextA"></span></div>
+        <div class="option" id="B">B) <span class="text"></span><div class="vote"></div><span class="vote-count-text" id="voteTextB"></span></div>
+        <div class="option" id="C">C) <span class="text"></span><div class="vote"></div><span class="vote-count-text" id="voteTextC"></span></div>
+        <div class="option" id="D">D) <span class="text"></span><div class="vote"></div><span class="vote-count-text" id="voteTextD"></span></div>
+      </div>
+      <div id="quizControlButtons">
+        <button id="submitAnswerBtn">Cevapla</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="message-box" id="messageBox">
+    <p id="messageText"></p>
+    <div class="message-buttons">
+      <button id="confirmBtn">Evet</button>
+      <button id="cancelBtn">Hayır</button>
+      <button id="closeMessageBtn">Kapat</button>
+    </div>
+  </div>
+  
+  <div class="answer-result-box" id="answerResultBox">
+      <p id="answerResultText"></p>
+      <button id="answerResultCloseBtn">Tamam</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

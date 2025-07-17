@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kendine Müzisyen - Müzik Tahmin Etme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://js.pusher.com/8.4/pusher.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html"> <img src="logo.png" alt="Kendine Müzisyen Logo"> </a>
+  </div>
+
+  <!-- <div class="main-container">
+    <div class="game-leaderboard">
+      <h3>Puan Tablosu</h3>
+      <div class="leaderboard-list" id="leaderboardList">
+        </div>
+    </div> -->
+    
+    <div class="container">
+      <p class="main-p">Henüz yapım aşamasında şuanlık 3 adet şarkı tahmini yapabilirsiniz. Gün geçtikçe her gün yeni 3 şarkı gelecek.</p>
+      <button id="startBtn" class="start-button">Yarışmayı Başlat</button>
+      
+      <div id="gameContent" class="game-content hidden">
+        <div class="game-info" id="gameStatus">Şarkı yükleniyor...</div>
+        
+        <div class="instrument-steps-container">
+          <div id="step1" class="step">1. Bas</div>
+          <div id="step2" class="step">2. Davul</div>
+          <div id="step3" class="step">3. Diğer</div>
+          <div id="step4" class="step">4. Vokal</div>
+        </div>
+        
+        <div id="currentInstrument" class="current-instrument"></div>
+
+        <div class="prediction-section">
+            <input type="text" id="guessInput" list="songSuggestions" placeholder="Şarkı adı yazın...">
+            <datalist id="songSuggestions"></datalist>
+            <button id="makeGuessBtn">Tahmin Yap</button>
+        </div>
+
+        <div class="control-buttons">
+            <button id="playNextInstrumentBtn">Enstrümanı Çal</button>
+            <button id="pauseResumeBtn" class="hidden">Durdur</button>
+            <button id="passBtn">Pas Geç</button>
+            <button id="nextSongBtn" class="hidden">Sonraki Şarkı</button>
+        </div>
+        
+        <div id="audioPlayerContainer">
+            <audio id="audioPlayer" src=""></audio>
+        </div>
+        
+        <div class="winner-display hidden" id="winnerDisplay"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="message-box" id="messageBox">
+    <p id="messageText"></p>
+    <div class="message-buttons">
+      <button id="closeMessageBtn">Kapat</button>
+    </div>
+  </div>
+  
+  <script src="music_guess.js"></script>
+</body>
+</html>

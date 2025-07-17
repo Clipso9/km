@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kendine Müzisyen Oyunları</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-selection-body">
+  <div class="header">
+    <a href="index.html"> <img src="logo.png" alt="Kendine Müzisyen Logo"> </a>
+  </div>
+
+  <div class="selection-container">
+    <h1 class="main-title">Oyun Seçimi</h1>
+    <p class="main-p">Oyunlar henüz yapım aşamasında buglar olabilir</p>
+    <div class="game-cards-container">
+      <div class="game-card" onclick="window.location.href='trivia.html';">
+        <div class="game-card-icon">📚</div>
+        <div class="game-card-title">Bilgi Yarışması</div>
+        <p class="game-card-description">5 Seviyeden oluşan 15 soruluk yarışma.</p>
+        <button class="select-game-btn">Oyuna Başla</button>
+      </div>
+
+    <div class="game-card" onclick="window.location.href='charades.html';">
+        <div class="game-card-icon">🤫</div>
+        <div class="game-card-title">Sessiz Sinema</div>
+        <p class="game-card-description">Filmi chat'te ilk bilen ol.</p>
+        <button class="select-game-btn">Oyuna Başla</button>
+    </div>
+
+    <div class="game-card" onclick="window.location.href='music_guess.html';">
+        <div class="game-card-icon">🤫</div>
+        <div class="game-card-title">Müzik tahmin</div>
+        <p class="game-card-description">Müziği bass - drum - diğer ve vocal kısımlarını dinleyerek tahmin et.</p>
+        <button class="select-game-btn">Oyuna Başla</button>
+    </div>
+
+    <div class="game-card" onclick="window.location.href='taboo.html';">
+        <div class="game-card-icon">🚫</div>
+        <div class="game-card-title">Tabu Oyunu</div>
+        <p class="game-card-description">Yasaklı kelimeleri kullanmadan chat'e anlat!</p>
+        <button class="select-game-btn">Oyuna Başla</button>
+    </div>
+
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

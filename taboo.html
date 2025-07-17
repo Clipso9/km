@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kendine Müzisyen - Tabu Oyunu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://js.pusher.com/8.4/pusher.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html"> <img src="logo.png" alt="Kendine Müzisyen Logo"> </a>
+  </div>
+
+  <div class="main-container">
+    <div class="game-leaderboard">
+      <h3>Puan Tablosu</h3>
+      <div class="leaderboard-list" id="leaderboardList">
+        </div>
+    </div>
+    
+    <div class="container">
+    
+      <button id="startTabooBtn" class="start-button">Tabu Oyununu Başlat</button>
+      <p class="main-p">Kamera yeri</p>
+      <p class="main-p">Chatteki kişiler chatten tahmin yapabilir, bilen kişiler puan alıp tabloya kayıt edilecektir.</p>
+      
+      <div id="tabooGameContent" class="game-content hidden">
+        <div class="timer" id="timer">60</div>
+        
+        <div class="word-card">
+          <div class="main-word" id="mainWord">Kelime Yükleniyor...</div>
+          <div class="forbidden-words">
+            <p>Yasaklı Kelimeler:</p>
+            <ul id="forbiddenWordsList">
+              <li>Yasaklı 1</li>
+              <li>Yasaklı 2</li>
+              <li>Yasaklı 3</li>
+              <li>Yasaklı 4</li>
+              <li>Yasaklı 5</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="control-buttons">
+            <button id="correctGuessBtn">Doğru Bildi!</button>
+            <button id="passBtn">Pas Geç</button>
+            <button id="tabooWordUsedBtn">Yasaklı Kelime!</button>
+        </div>
+        
+        <div class="round-message hidden" id="roundMessage"></div>
+        <button id="nextWordBtn" class="hidden">Sonraki Kelime</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="message-box" id="messageBox">
+    <p id="messageText"></p>
+    <div class="message-buttons">
+      <button id="closeMessageBtn">Kapat</button>
+    </div>
+  </div>
+  
+  <script src="taboo.js"></script>
+</body>
+</html>

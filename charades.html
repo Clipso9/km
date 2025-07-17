@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kendine Müzisyen - Sessiz Sinema</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://js.pusher.com/8.4/pusher.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html"> <img src="logo.png" alt="Kendine Müzisyen Logo"> </a>
+  </div>
+
+  <div class="main-container">
+    <div class="game-leaderboard">
+      <h3>Puan Tablosu</h3>
+      <div class="leaderboard-list" id="leaderboardList">
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="category-selection">
+        <p class="main-p">Chatteki kişiler film anlatılırken chatten tahmin yapabilir, bilen kişiler puan alıp tabloya kayıt edilecektir.</p>
+        <h3>Film Kategorisini Seçin:</h3>
+        <div class="radio-group">
+          <input type="radio" id="categoryYerli" name="category" value="yerli" checked>
+          <label for="categoryYerli">Yerli</label>
+          <input type="radio" id="categoryYabanci" name="category" value="yabanci">
+          <label for="categoryYabanci">Yabancı</label>
+        </div>
+      </div>
+      <button id="startBtn" class="start-button">Yarışmayı Başlat</button>
+      
+      <div id="movieInfoContainer" class="movie-info-container hidden">
+        <div class="movie-name-display" id="movieTitleDisplay"></div>
+        <div class="movie-origin-display" id="movieOriginDisplay"></div>
+        <div class="control-buttons">
+            <button id="nextRoundBtn" onclick="startNewRound()">Sonraki Film</button> 
+            <button id="passBtn" style="display:none;">Pas</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question-box">
+    <div id="gameContent" style="display:none;">
+      <div class="timer" id="timer">90</div>
+      <div class="game-info" id="gameStatus">Film yükleniyor...</div>
+      <div class="hidden-title" id="hiddenTitle"></div>
+      <div class="winner-display hidden" id="winnerDisplay"></div>
+    </div>
+  </div>
+
+  <div class="message-box" id="messageBox">
+    <p id="messageText"></p>
+    <div class="message-buttons">
+      <button id="closeMessageBtn">Kapat</button>
+    </div>
+  </div>
+  
+  <script src="charades.js"></script>
+</body>
+</html>
